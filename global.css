@@ -1,0 +1,22 @@
+:root {
+    --color-blackshades: #0f172a;
+    --color-whitecream: #f0e8d5;
+    --color-neonpurple: #e1c6fe;
+    
+    --color-white: #fff;
+    --color-gray: rgb(148, 163, 184);
+
+    --font-system-ui: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+    --font-size-3xl: 17px;
+    --font-size-xl: 15px;
+    --font-size-base: 13px;
+    --font-size-xs: 9px;
+    --font-size-3xs: 7px;
+
+    --text-shadow-glow: 0 0 5px var(--color-neonpurple);
+}
+
+.text-shadow-glow {
+    text-shadow: var(--text-shadow-glow);
+}
