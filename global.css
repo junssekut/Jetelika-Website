@@ -1,4 +1,13 @@
 :root {
+    --color-primary: white;
+    --color-secondary: black;
+
+    --color-theme-primary: #606c38;
+    --color-theme-secondary: #283618;
+    --color-theme-tertiary: #fefae0;
+    --color-theme-quartermary: #dda15e;
+    --color-theme-quadramary: #bc6c25;
+
     --color-blackshades: #0f172a;
     --color-whitecream: #f0e8d5;
     --color-neonpurple: #e1c6fe;
@@ -6,8 +15,14 @@
     --color-white: #fff;
     --color-gray: rgb(148, 163, 184);
 
+    --font-inter: "Inter", sans-serif;
     --font-system-ui: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: var(--font-inter);
 
+    --font-size-17xl: 45px;
+    --font-size-16xl: 40px;
+    --font-size-15xl: 30px;
+    --font-size-9xl: 25px;
     --font-size-3xl: 17px;
     --font-size-xl: 15px;
     --font-size-base: 13px;
@@ -15,8 +30,42 @@
     --font-size-3xs: 7px;
 
     --text-shadow-glow: 0 0 5px var(--color-neonpurple);
+
+    --br-xl: 20px;
+    --br-base: 16px;
+    --br-xs: 12px;
+    --br-3xs: 9px;
+
+    --padding-5xl: 26px;
+    --padding-3xl: 20px;
+    --padding-xl: 16px;
+    --padding-base: 12px;
+    --padding-xs: 9px;
+    --padding-3xs: 6px;
 }
 
 .text-shadow-glow {
-    text-shadow: var(--text-shadow-glow);
+    /* text-shadow: var(--text-shadow-glow);
+    color: var(--color-whitecream); */
+}
+
+.border-glassmorpishm-primary {
+    /* background: var(--color-theme-primary); */
+
+    /* background: rgba( 255, 255, 255, 0.05 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 20px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+}
+
+.border-glassmorpishm-secondary {
+    /* background: var(--color-theme-secondary); */
+    /* background: rgba( 15, 23, 42, 1 ); */
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }

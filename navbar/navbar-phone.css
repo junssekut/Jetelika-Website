@@ -1,0 +1,102 @@
+@media (max-width: 391px) {
+/* @media (max-width: 391px) { */
+    .navbar-container {
+        justify-content: space-between;
+    }
+
+    .navbar-logo-container {
+        width: 120px;
+    }
+
+    .navbar-logo {
+        width: 30px;
+        height: 30px;
+
+        margin: 0 8px 0 0;
+    }
+
+    .navbar-logo-text {
+        font-size: var(--font-size-xl);
+    }
+
+    .navbar-links {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        position: absolute;
+
+        top: 0px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        padding: 50px 0;
+        width: 100%;
+
+        gap: 10px;
+        
+        background-color: var(--color-theme-secondary);
+        /* background: rgba( 255, 255, 255, 0.25 );
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 ); */
+
+        height: calc(100vh - 3.5rem);
+        overflow: auto;
+        opacity: 0;
+        pointer-events: none;
+        cursor: pointer;
+        
+        /* transition: top 0.4s, opacity 0.3s; */
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-toggle-icon {
+        display: flex;
+    }
+
+    .navbar-toggle-close {
+        opacity: 0;
+    }
+
+    .show-menu {
+        opacity: 1;
+        top: 0px;
+        pointer-events: initial;
+    }
+
+    .show-icon .navbar-toggle-open {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+
+    .show-icon .navbar-toggle-close {
+        opacity: 1;
+        transform: rotate(90deg);
+    }
+
+    .navbar-link {
+        padding: 30px;
+        width: 100%;
+        background-color: var(--color-theme-secondary);
+        border: none;
+        color: var(--color-primary);
+        font-weight: 400;
+        font-size: var(--font-size-base);
+    }
+    
+    .navbar-link:hover {
+        padding: 30px;
+        width: 100%;
+        background-color: var(--color-theme-primary);
+        border: none;
+        color: var(--color-primary);
+        font-weight: 400;
+        font-size: var(--font-size-base);
+    }
+
+
+}
+

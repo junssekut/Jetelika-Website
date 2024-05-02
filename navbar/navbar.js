@@ -1,6 +1,42 @@
 import { loadHTML, loadCSS, loadFont, loadPreconnectTags } from "../js/loader.js";
 
+const config = {
+    responsivePhoneWidth: 390
+}
+
 let active_navbar;
+
+function handleResponsive() {
+    const initPhone = function() {
+        console.log('Phone detected!');
+
+        Array.from(document.getElementsByClassName('navbar-link')).forEach((element) => {
+            element.textContent = '';
+            switch (element.getAttribute('id')) {
+                case 'link-event':
+                    element.innerHTML = '<i class="navbar-link-icon fa-regular fa-calendar-check"></i>';
+                    break;
+                case 'link-schedule':
+                    element.innerHTML = '<i class="navbar-link-icon fa-brands fa-slack"></i>';
+                    break;
+                case 'link-home':
+                    element.innerHTML = '<i class="navbar-link-icon fa-solid fa-house"></i>';
+                    break;
+                case 'link-ticket':
+                    element.innerHTML = '<i class="navbar-link-icon fa-solid fa-ticket"></i>';
+                    break;
+                case 'link-booking':
+                    element.innerHTML = '<i class="navbar-link-icon fa-solid fa-circle-plus"></i>';
+                    break;
+            }
+        });
+    };
+
+    if (window.innerWidth <= config.responsivePhoneWidth) {
+        initPhone();
+        return;
+    }
+}
 
 function handleEventListeners() {
     const onNavClick = function(e) {
@@ -52,6 +88,20 @@ function handleEventListeners() {
             correspondingLink.classList.add('navbar-link-active');
         }
     }
+
+    const onToggleIconClick = function() {
+        const toggleDiv = document.getElementById('navbar-toggle');
+        const menu = document.getElementById('navbar-links');
+
+        menu.classList.toggle('show-menu');
+        toggleDiv.classList.toggle('show-icon');
+    };
+
+    Array.from(document.getElementsByClassName('navbar-toggle-icon'), (linkElement) => {
+        linkElement.addEventListener('click', onToggleIconClick);
+    });
+
+    return;
     
     Array.from(document.getElementsByClassName('navbar-link')).forEach((element) => {
         if (element.classList.contains('navbar-link-active')) active_navbar = element;
@@ -73,7 +123,8 @@ function init() {
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
         'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css',
         '../global.css',
-        '../navbar/navbar.css'
+        '../navbar/navbar.css',
+        '../navbar/navbar-phone.css'
     ]
 
     loadPreconnectTags();
@@ -99,10 +150,11 @@ function init() {
         loadHTML('../navbar/navbar.html', navbarPlaceholder.id)
             .then(() => {
                 window.addEventListener('scroll', function() {
+                    return;
                     var navbar = document.getElementById('navbar-links');
                     var scrollPosition = window.scrollY;
                 
-                    if (scrollPosition > 10) {
+                    if (scrollPosition >= 100) {
                         navbar.classList.add('navbar-sticky');
                     } else {
                         navbar.classList.remove('navbar-sticky');
@@ -110,6 +162,8 @@ function init() {
                 });
         
                 handleEventListeners();
+                return;
+                handleResponsive();
             })
             .catch((e) => `Failed to load navbar html: ${console.error(e)}`);
     });
