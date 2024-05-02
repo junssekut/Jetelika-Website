@@ -124,6 +124,9 @@
     line-height: 1.1em;
 }
 
+.landing-slide-image {
+    width: 100%;
+}
 
 .test {
     font-size: 100px;
