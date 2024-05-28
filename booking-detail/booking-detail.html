@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Detail</title>
+
+    <link rel="stylesheet" href="./booking-detail.css">
+    <link rel="stylesheet" href="../notification/notification.css">
+</head>
+<body>
+    <div id="preloader"></div>
+
+    <nav class="navbar-container" id="navbar-placeholder"></nav>
+
+    <div class="container">
+        <div class="shadow shadow-style-to-top"></div>
+        
+        <div class="content" id="content">
+            <div class="modal">
+                <div class="modal-child">
+                    <div class="modal-header">
+                        <h1 class="modal-title">Booking Detail</h1>
+                    </div>
+                    <form class="modal-form" id="form-detail">
+                        <div class="input-field">
+                            <input class="input-field-obj" type="text" name="" id="input-name" placeholder="Full Name">
+                        </div>
+                        <div class="input-field">
+                            <!-- <p class="input-field-name">Email Address</p> -->
+                            <input class="input-field-obj" type="email" name="" id="input-email" placeholder="Email Address">
+                        </div>
+                        <div class="input-field">
+                            <p class="input-field-name">Start Date</p>
+                            <input class="input-field-obj" type="date" name="" id="">
+                        </div>
+                    </form>
+                    <div class="modal-payment">
+                        <!-- <h1 class="modal-payment-title">Payment Method</h1> -->
+                        <div class="modal-payment-buttons">
+                            <button class="modal-button modal-button-style-1" href="credit-card">Credit Card</button>
+                            <button class="modal-button modal-button-style-2" href="jetelika-pay">JeteLika Pay</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-child modal-child-style-1" id="child-credit-card">
+                    <h1 class="modal-title">Credit Card</h1>
+                    <form class="modal-form" id="form-credit-card">
+                        <div class="input-field">
+                            <p class="input-field-name">Card Number</p>
+                            <input class="input-field-obj" type="text" name="" id="input-card-number" placeholder="3742 4545 5400 126">
+                        </div>
+                        <div class="input-field">
+                            <p class="input-field-name">Security Code</p>
+                            <input class="input-field-obj" type="number" name="" id="input-security-code" placeholder="367">
+                        </div>
+                        <p class="input-field-name">Expiry Date</h1>
+                        <div class="input-field-expiration">
+                            <div class="input-field input-field-small">
+                                <p class="input-field-name">MM</p>
+                                <input class="input-field-obj" type="number" name="" id="input-expiry-month" placeholder="05">
+                            </div>
+                            <div class="input-field input-field-small">
+                                <p class="input-field-name">YY</p>
+                                <input class="input-field-obj" type="number" name="" id="input-expiry-year" placeholder="26">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-submit-wrapper">
+                        <button class="modal-button modal-button-style-3 modal-submit">Book Now</button>
+                    </div>
+                </div>
+                <div class="modal-child modal-child-style-2" id="child-jetelika-pay">
+                    <h1 class="modal-title">JeteLika Pay</h1>
+                    <form class="modal-form" id="form-jetelika-pay">
+                        <p class="input-field-name">Phone Number</p>
+                        <div class="input-field-phonenumber">
+                            <div class="input-field input-field-very-small">
+                                <input class="input-field-obj" type="text" name="" id="input-phone-location" placeholder="+62">
+                            </div>
+                            <div class="input-field">
+                                <input class="input-field-obj" type="text" name="" id="input-phone-number" placeholder="821 5463 8038">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-submit-wrapper">
+                        <button class="modal-button modal-button-style-3 modal-submit">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script defer type="module" src="./booking-detail.js"></script>
+    <script type="module" src="../js/preloader-injector.js"></script>
+</body>
+</html>

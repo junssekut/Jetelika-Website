@@ -11,6 +11,12 @@
     --color-blackshades: #0f172a;
     --color-whitecream: #f0e8d5;
     --color-neonpurple: #e1c6fe;
+
+    --color-dimgray: rgb(105, 105, 105);
+
+    --color-jblue: #0a2d6d;
+    --color-darkpurple: #28223e;
+    --color-purple: rgb(34, 4, 14);
     
     --color-white: #fff;
     --color-gray: rgb(148, 163, 184);
@@ -42,30 +48,4 @@
     --padding-base: 12px;
     --padding-xs: 9px;
     --padding-3xs: 6px;
-}
-
-.text-shadow-glow {
-    /* text-shadow: var(--text-shadow-glow);
-    color: var(--color-whitecream); */
-}
-
-.border-glassmorpishm-primary {
-    /* background: var(--color-theme-primary); */
-
-    /* background: rgba( 255, 255, 255, 0.05 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 3.5px );
-    -webkit-backdrop-filter: blur( 3.5px );
-    border-radius: 20px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
-}
-
-.border-glassmorpishm-secondary {
-    /* background: var(--color-theme-secondary); */
-    /* background: rgba( 15, 23, 42, 1 ); */
-    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }

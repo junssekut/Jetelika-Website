@@ -1,66 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JeteLika</title>
+
+    <link rel="shortcut icon" href="../assets/images/logo-jetelika.png" type="image/x-icon" />
 
     <link rel="stylesheet" href="./custom-scrollbar.css">
     <link rel="stylesheet" href="../global.css">
     <link rel="stylesheet" href="./home.css">
     <link rel="stylesheet" href="./animation.css">
 </head>
+
 <body>
+    <div id="preloader"></div>
 
-    <div class="container" id="container">
-        <nav class="navbar-container" id="navbar-placeholder"></nav>
+    <nav class="navbar-container" id="navbar-placeholder"></nav>
+    
+    <div class="container">
+        <div class="shadow shadow-style-to-bottom"></div>
 
-        <div class="landing-container">
-            <div class="landing-container-wrapper">
-                <h1 class="landing-title">Enjoy Your Favorite Grand Prix Tours Anytime with JeteLika's Top <span class="landing-title-2">#1 Stream Platform</span></h1>
-                <p class="landing-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo libero delectus! Doloribus commodi esse quae, eligendi repellat fugit accusantium! Laborum iure ullam velit cupiditate reprehenderit quisquam natus incidunt animi?</p>
+        <div class="container-header">
+            <h1 class="header-title">Escape From Reality</h1>
+            <h1 class="header-title">Let's Explore The World</h1>
 
-                <div class="landing-contents">
-                    <div class="landing-content">
-                        <h1 class="landing-content-value landing-content-value-style-1">300+</h1>
-                        <p class="landing-content-text">Countries Subscribed</p>
-                    </div>
-                    <div class="landing-content">
-                        <h1 class="landing-content-value landing-content-value-style-2">1.3k+</h1>
-                        <p class="landing-content-text">Streams</p>
-                    </div>
-                    <div class="landing-content">
-                        <h1 class="landing-content-value landing-content-value-style-2">1.1k+</h1>
-                        <p class="landing-content-text">Schedules Every Month</p>
-                    </div>
-                </div>
+            <div class="container-text">
+                <p class="text-content">Get amazing experience here, no matter where in the world you want to go,</p>
+                <p class="text-content">we can help you enjoy your fullest.</p>
             </div>
 
-            <div class="landing-container-images">
-                <div class="landing-slide fade">
-                    <div class="landing-slide-number-text">1 / 3</div>
-                    <img src="./assets/images/card/racing-1.jpeg" alt="" class="landing-slide-image">
-                </div>
-                <div class="landing-slide fade">
-                    <div class="landing-slide-number-text">2 / 3</div>
-                    <img src="./assets/images/card/racing-1.jpeg" alt="" class="landing-slide-image">
-                </div>
-                <div class="landing-slide fade">
-                    <div class="landing-slide-number-text">3 / 3</div>
-                    <img src="./assets/images/card/racing-1.jpeg" alt="" class="landing-slide-image">
-                </div>
-
-                <a class="landing-container-prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="landing-container-next" onclick="plusSlides(1)">&#10094;</a>
-            </div>
-
+            <button class="button-explore" jhref="../event/event.html">Explore Now <i class="fa-solid fa-chevron-down button-explore-icon"></i></button>
         </div>
-
-        
     </div>
 
-
-
     <script defer type="module" src="./home.js"></script>
+    <!-- <script defer src="./slider.js"></script> -->
+    <script type="module" src="../js/preloader-injector.js"></script>
 </body>
+
 </html>

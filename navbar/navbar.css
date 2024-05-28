@@ -1,14 +1,20 @@
+a {
+    text-decoration: none;
+}
+
 .navbar-container {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 
-    width: 90vw;
+    /* top left */
+    padding: 15px 50px;
 
-    /* padding-bottom: 3%; */
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.5 );
 
-    /* border: 1px solid red; */
+    transition: all 0.2s ease-in-out;
 }
 
 .navbar-logo-container {
@@ -19,42 +25,59 @@
 
     width: 200px;
 
-    /* border: 2px solid blue; */
+    cursor: pointer;
 }
 
 .navbar-logo {
     width: 55px;
     height: 55px;
 
-    margin: 0 15px 0 0;
+    margin-right: 15px;
+
+    border-radius: 35px;
+
+    transition: all 0.5s;
 
     object-fit: cover;
 }
 
 .navbar-logo-text {
-    font-size: var(--font-size-9xl);
+    color: var(--color-white);
+    font-size: var(--font-size-9xl);  
     font-weight: 700;
+
+    transition: all 0.2s;
 }
 
 .navbar-logo-text-2 {
-    color: var(--color-theme-primary);
+    color: var(--color-white);
+}
+
+.navbar-logo-text-active {
+    color: var(--color-neonpurple);
+    text-shadow: 0 0 0 transparent,
+        0 0 20px rgb(255, 255, 255);
+}
+
+.navbar-logo-container:hover .navbar-logo-text {
+    text-shadow: 0 0 0 transparent,
+        0 0 20px rgb(255, 255, 255);
+}
+
+.navbar-logo-container:hover .navbar-logo {
+    margin-right: 20px;
+    transform: scale(1.2);
 }
 
 .navbar-links {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-
-    padding: 13px;
 
     gap: 30px;
 
-    width: 100%;
-
     list-style-type: none;
-
-    /* border: 2px solid green; */
 }
 
 .navbar-link {
@@ -62,63 +85,30 @@
     justify-content: center;
     align-items: center;
 
-    width: 80px;
+    width: 100px;
     height: 30px;
-    color: var(--color);
+
+    color: var(--color-dimgray);
+    font-weight: 600;
 
     box-sizing: border-box;
     user-select: none;
     cursor: pointer;
+    text-decoration: none;
 
-    transition: 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
-@keyframes slideIn {
-    from {
-        top: -10%; /* Initial position */
-    }
-    to {
-        top: 0; /* Final position */
-    }
+.navbar-link-active {
+    text-shadow: 0 0 0 transparent,
+        0 0 20px rgb(255, 255, 255);
+    letter-spacing: 0.2rem;
+    color: var(--color-neonpurple);
 }
 
-.navbar-sticky {
-    position: fixed;
-    top: 10px;
-    animation: slideIn 0.3s ease-in-out;
-    z-index: 1000;
-}
-
-.navbar-link-style-1 {
-    color: var(--color-black);
-}
-
-.navbar-link-style-1:hover {
-    color: var(--color-theme-quartermary);
-}
-
-.navbar-link-style-2 {
-    font-weight: 600;
-    color: var(--color-theme-quadramary);
-    border: 2px solid var(--color-theme-quadramary);
-}
-
-.navbar-link-style-2:hover {
-    color: var(--color-primary);
-    background-color: var(--color-theme-quadramary);
-}
-
-.navbar-link-style-3 {
-    font-weight: 600;
-
-    color: var(--color-primary);
-    border: 2px solid var(--color-theme-secondary);
-    background-color: var(--color-theme-secondary);
-}
-
-.navbar-link-style-3:hover {
-    background-color: var(--color-primary);
-    color: var(--color-theme-secondary);
+.navbar-link:hover {
+    letter-spacing: 0.1rem;
+    color: var(--color-white);
 }
 
 .navbar-toggle {
@@ -142,4 +132,12 @@
 
 .navbar-toggle-icon {
     display: none;
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 390px) {
+
 }

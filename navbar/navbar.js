@@ -1,4 +1,5 @@
 import { loadHTML, loadCSS, loadFont, loadPreconnectTags } from "../js/loader.js";
+import { registerButtons } from '../js/global.js';
 
 const config = {
     responsivePhoneWidth: 390
@@ -42,51 +43,21 @@ function handleEventListeners() {
     const onNavClick = function(e) {
         e.preventDefault();
 
-        const navbarLink = e.target;
-
-        active_navbar.classList.remove('navbar-link-active');
-        navbarLink.classList.add('navbar-link-active');
-
-        active_navbar = navbarLink;
-
-        const targetId = this.getAttribute('href').substring(1); // Get target element id
-        const targetElement = document.getElementById(targetId); // Get target element
-
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    }
-
-    const updateActiveNavbarLink = function() {
-        // Get all navbar links
-        const navbarLinks = document.querySelectorAll('.navbar-link');
-        
-        // Get the scroll position
-        const scrollPosition = window.scrollY;
-
-        // Loop through each section and find the one closest to the top of the viewport
-        let closestSection = document.getElementById('container');
-        let closestDistance = Infinity;
-        document.querySelectorAll('div').forEach(section => {
-            const distanceToTop = Math.abs(section.offsetTop - scrollPosition);
-            if (distanceToTop < closestDistance) {
-                closestDistance = distanceToTop;
-                closestSection = section;
+        if (this.getAttribute('href').startsWith('#')) {
+            const targetId = this.getAttribute('href').substring(1); // Get target element id
+            const targetElement = document.getElementById(targetId); // Get target element
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
             }
-        });
 
-        // Remove navbar-link-active from all links
-        navbarLinks.forEach(link => {
-            link.classList.remove('navbar-link-active');
-        });
-
-        // Get the corresponding navbar link for the closest section
-        const correspondingLink = document.querySelector(`.navbar-link[href="#${closestSection.id}"]`);
-        if (correspondingLink) {
-            correspondingLink.classList.add('navbar-link-active');
+            return;
         }
+
+        const targetPage = this.getAttribute('href');
+        window.open(targetPage, '_self');
     }
 
     const onToggleIconClick = function() {
@@ -100,17 +71,27 @@ function handleEventListeners() {
     Array.from(document.getElementsByClassName('navbar-toggle-icon'), (linkElement) => {
         linkElement.addEventListener('click', onToggleIconClick);
     });
+}
 
-    return;
-    
+function handleActive() {
+    // window.location
+
+    const locationHref = window.location.href.toLowerCase();
+
     Array.from(document.getElementsByClassName('navbar-link')).forEach((element) => {
-        if (element.classList.contains('navbar-link-active')) active_navbar = element;
-        element.addEventListener('click', onNavClick);
+        console.log(`href ${window.location.href}, text ${element.textContent}`)
+        if (locationHref.includes(element.textContent.toLowerCase())) element.classList.add('navbar-link-active');
     });
 
-    window.addEventListener('scroll', updateActiveNavbarLink);
-
-    updateActiveNavbarLink();
+    if (locationHref.includes('home')) {
+        document.querySelectorAll('.navbar-logo-text').forEach((element) => {
+            if (element.classList.contains('navbar-logo-text-active')) {
+                element.classList.remove('navbar-logo-text-active');
+            } else {
+                element.classList.add('navbar-logo-text-active');
+            }
+        });
+    }
 }
 
 function init() {
@@ -149,21 +130,21 @@ function init() {
 
         loadHTML('../navbar/navbar.html', navbarPlaceholder.id)
             .then(() => {
-                window.addEventListener('scroll', function() {
-                    return;
-                    var navbar = document.getElementById('navbar-links');
-                    var scrollPosition = window.scrollY;
+                // window.addEventListener('scroll', function() {
+                //     var navbar = document.getElementById('navbar-links');
+                //     var scrollPosition = window.scrollY;
                 
-                    if (scrollPosition >= 100) {
-                        navbar.classList.add('navbar-sticky');
-                    } else {
-                        navbar.classList.remove('navbar-sticky');
-                    }
-                });
+                //     if (scrollPosition >= 100) {
+                //         navbar.classList.add('navbar-sticky');
+                //     } else {
+                //         navbar.classList.remove('navbar-sticky');
+                //     }
+                // });
         
                 handleEventListeners();
-                return;
-                handleResponsive();
+                // handleResponsive();
+                registerButtons();
+                handleActive();
             })
             .catch((e) => `Failed to load navbar html: ${console.error(e)}`);
     });

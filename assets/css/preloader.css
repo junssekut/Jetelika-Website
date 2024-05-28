@@ -1,0 +1,23 @@
+.preloader-placeholder {
+    background: var(--color-purple) url(../images/logo-jetelika.png) no-repeat center center;
+    background-blend-mode: normal;
+    background-size: 10%;
+    height: 100vh;  
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    transition: opacity 0.5s ease-out;
+}
+
+@media (max-width: 1024px) {
+    .preloader-placeholder {
+        top: -200px;
+        height: 130vh;
+    }
+}
+
+@media (max-width: 390px) {
+    .preloader-placeholder {
+        height: 150vh;
+    }
+}

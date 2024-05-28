@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+
+    <link rel="stylesheet" href="./event.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="preloader"></div>
+
+    <nav class="navbar-container" id="navbar-placeholder"></nav>
+
+    <div class="container">
+        <div class="shadow-1"></div>
+        
+        <div class="event-modals">
+            <div class="event-modal">
+                <div class="event-modal-icon-wrapper">
+                    <i class="fa-solid fa-road event-modal-icon"></i>
+                </div>
+                <h1 class="event-modal-title">JeteLika Grand Prix</h1>
+                <p class="event-modal-text">Saturday, 25 May 2024</p>
+                <p class="event-modal-text">04.00 PM</p>
+                <p class="event-modal-text">JeteLika Main Circuit, West JeteLika</p>
+                <button class="event-modal-button">Book Now <i class="fa-solid fa-bookmark event-modal-button-icon"></i></button>
+            </div>
+            <div class="event-modal">
+                <div class="event-modal-icon-wrapper">
+                    <i class="fa-solid fa-music event-modal-icon"></i>
+                </div>
+                <h1 class="event-modal-title">Music Festival 2024</h1>
+                <p class="event-modal-text">Sunday, 15 June 2024</p>
+                <p class="event-modal-text">06:00 PM</p>
+                <p class="event-modal-text">Sunset Park, East Side City</p>
+                <button class="event-modal-button">
+                    Get Ticket <i class="fa-solid fa-ticket-alt event-modal-button-icon"></i>
+                </button>
+            </div>            
+        </div>
+
+        <div class="featured-event">
+            <div class="event-modals featured-event-modals">
+                <div class="event-modal event-modal-style-1">
+                    <img src="../public/art-expo.jpg" alt="" class="event-modal-image">
+                    <h1 class="event-modal-title">Art Expo 2024</h1>
+                    <p class="event-modal-text">Friday, 12 July 2024</p>
+                    <p class="event-modal-text">10:00 AM</p>
+                    <p class="event-modal-text">Art Gallery, Main Street</p>
+                    <p class="event-modal-description">Join us for a spectacular display of modern art from around the world, featuring renowned artists and emerging talents.</p>
+                    <button class="event-modal-button">
+                        Register Now <i class="fa-solid fa-palette event-modal-button-icon"></i>
+                    </button>
+                </div>
+                <div class="event-modal event-modal-style-1">
+                    <img src="../public/film-festival.jpg" alt="" class="event-modal-image">
+                    <h1 class="event-modal-title">Film Festival 2024</h1>
+                    <p class="event-modal-text">Saturday, 20 September 2024</p>
+                    <p class="event-modal-text">02:00 PM</p>
+                    <p class="event-modal-text">City Cinema, 5th Avenue</p>
+                    <p class="event-modal-description">Experience a weekend of cinematic excellence, featuring screenings of award-winning films, Q&A sessions with directors, and special premieres.</p>
+                    <button class="event-modal-button">
+                        Buy Tickets <i class="fa-solid fa-ticket-alt event-modal-button-icon"></i>
+                    </button>
+                </div>
+                <div class="event-modal event-modal-style-1">
+                    <img src="../public/book-fair.jpg" alt="" class="event-modal-image">
+                    <h1 class="event-modal-title">Book Fair 2024</h1>
+                    <p class="event-modal-text">Wednesday, 5 November 2024</p>
+                    <p class="event-modal-text">09:00 AM</p>
+                    <p class="event-modal-text">City Library, West Wing</p>
+                    <p class="event-modal-description">Discover a vast collection of books from various genres, meet your favorite authors, and participate in interactive workshops and discussions.</p>
+                    <button class="event-modal-button">
+                        Join Now <i class="fa-solid fa-bookmark event-modal-button-icon"></i>
+                    </button>
+                </div>
+                                                
+            </div>
+        </div>
+
+        <div class="divider">
+            <div class="divider-header">
+                <h1 class="divider-text text-big">JeteLika provides the best experience for it's user.</h1>
+                <p class="divider-text text-medium">Watch. Experience. Enjoy.</p>
+            </div>
+        </div>
+
+        <div class="feeds-container">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-card event-modal event-modal-style-1">
+                        <img src="../public/food-festival.jpg" alt="" class="event-modal-image">
+                        <h1 class="event-modal-title">Food Festival 2024</h1>
+                        <p class="event-modal-text">Saturday, 25 August 2024</p>
+                        <p class="event-modal-text">12:00 PM</p>
+                        <p class="event-modal-text">City Park, Downtown</p>
+                        <p class="event-modal-description">Indulge in a culinary adventure with a wide array of delicious dishes, cooking demonstrations, and live entertainment at the Food Festival.</p>
+                        <button class="event-modal-button">
+                            RSVP Now <i class="fa-solid fa-utensils event-modal-button-icon"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="carousel-card event-modal event-modal-style-1">
+                        <img src="../public/sports-tournament.jpg" alt="" class="event-modal-image">
+                        <h1 class="event-modal-title">Sports Tournament 2024</h1>
+                        <p class="event-modal-text">Saturday, 10 September 2024</p>
+                        <p class="event-modal-text">09:00 AM</p>
+                        <p class="event-modal-text">City Stadium, Sports Avenue</p>
+                        <p class="event-modal-description">Experience the thrill of competition at the Sports Tournament, featuring various sports events, competitions, and family-friendly activities.</p>
+                        <button class="event-modal-button">
+                            Sign Up <i class="fa-solid fa-running event-modal-button-icon"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="carousel-card event-modal event-modal-style-1">
+                        <img src="../public/tech-conference.jpg" alt="" class="event-modal-image">
+                        <h1 class="event-modal-title">Tech Conference 2024</h1>
+                        <p class="event-modal-text">Friday, 5 October 2024</p>
+                        <p class="event-modal-text">10:00 AM</p>
+                        <p class="event-modal-text">Tech Center, Silicon Valley</p>
+                        <p class="event-modal-description">Explore the latest trends and innovations in technology at the Tech Conference, featuring keynote speakers, workshops, and networking opportunities.</p>
+                        <button class="event-modal-button">
+                            Learn More <i class="fa-solid fa-laptop-code event-modal-button-icon"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="carousel-card event-modal event-modal-style-1">
+                        <img src="../public/science-exhibition.jpg" alt="" class="event-modal-image event-modal-image-bottom">
+                        <h1 class="event-modal-title">Science Exhibition 2024</h1>
+                        <p class="event-modal-text">Saturday, 20 November 2024</p>
+                        <p class="event-modal-text">11:00 AM</p>
+                        <p class="event-modal-text">Science Museum, Science Street</p>
+                        <p class="event-modal-description">Discover the wonders of science at the Science Exhibition, featuring interactive exhibits, demonstrations, and hands-on activities for all ages.</p>
+                        <button class="event-modal-button">
+                            Visit Now <i class="fa-solid fa-flask event-modal-button-icon"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="carousel-card event-modal event-modal-style-1">
+                        <img src="../public/fashion-show.jpg" alt="" class="event-modal-image event-modal-image-top">
+                        <h1 class="event-modal-title">Fashion Show 2024</h1>
+                        <p class="event-modal-text">Friday, 15 December 2024</p>
+                        <p class="event-modal-text">07:00 PM</p>
+                        <p class="event-modal-text">Fashion Center, Glamour Street</p>
+                        <p class="event-modal-description">Experience the latest trends and designs at the Fashion Show, featuring runway presentations, designer showcases, and VIP receptions.</p>
+                        <button class="event-modal-button">
+                            Reserve Seats <i class="fa-solid fa-camera event-modal-button-icon"></i>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="carousel-buttons">
+                <button class="carousel-button prev" id="prevBtn"><i class="fa-solid fa-caret-left carousel-button-icon"></i></button>
+                <button class="carousel-button next" id="nextBtn"><i class="fa-solid fa-caret-right carousel-button-icon"></i></button>
+            </div>
+        </div>
+    </div>
+    <script defer type="module" src="./event.js"></script>
+    <script type="module" src="../js/preloader-injector.js"></script>
+</body>
+</html>
