@@ -1,5 +1,5 @@
 .preloader-placeholder {
-    background: var(--color-purple) url(../images/logo-jetelika.png) no-repeat center center;
+    background: var(--color-purple) url(../images/preloader.gif) no-repeat center center;
     background-blend-mode: normal;
     background-size: 10%;
     height: 100vh;  

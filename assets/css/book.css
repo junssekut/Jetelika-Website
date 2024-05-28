@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Quicksand', sans-serif;    
+}
+
+body {
+    background-color: var(--color-purple);
+    background-image: url('../public/race-5.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shadow {
+    position: absolute;
+    z-index: -1;
+    /* background: black; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.shadow-style-to-bottom {
+    background: linear-gradient(to top, rgb(34, 4, 14, 0.3), rgba(34, 4, 14, 1));
+}
+
+.shadow-style-to-top {
+    background: linear-gradient(to bottom, rgb(34, 4, 14, 0.3), rgba(34, 4, 14, 1));
+}
+
+.packages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 80vh;
+
+    gap: 30px;
+
+    /* border: 1px solid red; */
+}
+
+.package {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 350px;
+    height: 350px;
+
+    gap: 5px;
+
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    transition: all 0.2s;
+}
+
+.package-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 30px;
+    margin-top: 30px;
+
+    /* border: 1px solid red; */
+}
+
+.package-title {
+    letter-spacing: 0.1rem;
+    font-size: var(--font-size-9xl);
+    color: var(--color-white);
+}
+
+.package-benefits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 10px;
+
+    /* border: 1px solid red; */
+}
+
+.package-benefit-title {
+    font-size: var(--font-size-5xl);
+    color: var(--color-white);
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+}
+
+.package-benefits-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 5px;
+
+    /* border: 1px solid red; */
+}
+
+.package-benefit {
+    font-size: var(--font-size-base);
+    color: var(--color-white);
+    letter-spacing: 0.08rem;
+}
+
+.package-benefit-icon {
+    position: relative;
+    margin: 5px;
+}
+
+.package-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    /* border: 1px solid red; */
+}
+
+.package-price {
+    font-weight: 500;
+    font-size: var(--font-size-5xl);
+    color: var(--color-neonpurple);
+    letter-spacing: 0.08rem;
+    margin: 10px;
+    text-shadow: 0 0 0 transparent,
+        0 0 20px rgb(255, 255, 255);
+}
+
+.package-book {
+    width: 150px;
+    height: 40px;
+
+    color: var(--color-white);
+    font-weight: 600;
+    letter-spacing: 0.08rem;
+
+    background: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.package-book:hover {
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.package-book-icon {
+    margin-left: 5px;
+    color: var(--color-blackshades);
+}
+
+.package-basic:hover {
+    background-color: rgba(200, 200, 200, 0.2);
+}
+
+.package-premium:hover {
+    background-color: rgba(255, 170, 0, 0.2);
+}
+
+.package-vip:hover {
+    background-color: rgba(242, 255, 0, 0.2);
+}
+
+.package-basic .package-title {
+    color: rgba(200, 200, 200, 0.8);
+}
+
+.package-premium .package-title {
+    color: rgba(255, 170, 0, 0.8);
+}
+
+.package-vip .package-title {
+    color: rgba(242, 255, 0, 0.8);
+}
+
+@media (max-width: 1024px) {
+    .packages {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .package {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 390px) {
+    .packages {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .package {
+        transform: scale(0.8);
+    }
+}

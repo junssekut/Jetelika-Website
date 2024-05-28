@@ -1,5 +1,4 @@
-import { loadHTML, loadCSS, loadFont, loadPreconnectTags } from "../js/loader.js";
-import { registerButtons } from '../js/global.js';
+import { loadHTML, loadCSS, loadFont, loadPreconnectTags } from "../assets/js/loader.js";
 
 const config = {
     responsivePhoneWidth: 390
@@ -79,7 +78,6 @@ function handleActive() {
     const locationHref = window.location.href.toLowerCase();
 
     Array.from(document.getElementsByClassName('navbar-link')).forEach((element) => {
-        console.log(`href ${window.location.href}, text ${element.textContent}`)
         if (locationHref.includes(element.textContent.toLowerCase())) element.classList.add('navbar-link-active');
     });
 
@@ -96,14 +94,13 @@ function handleActive() {
 
 function init() {
     const fonts = {
-        'Poppins': 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap',
-        'Workbench': 'https://fonts.googleapis.com/css2?family=Workbench&display=swap'
+        
     }
 
     const css_links = [
-        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
-        'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css',
-        '../global.css',
+        '../assets/fontawesome/css/all.min.css',
+        '../assets/css/fonts.css',
+        '../assets/css/global.css',
         '../navbar/navbar.css',
         '../navbar/navbar-phone.css'
     ]
@@ -142,8 +139,6 @@ function init() {
                 // });
         
                 handleEventListeners();
-                // handleResponsive();
-                registerButtons();
                 handleActive();
             })
             .catch((e) => `Failed to load navbar html: ${console.error(e)}`);

@@ -12,8 +12,6 @@ function registerEvents() {
     document.querySelectorAll('.card-button-book').forEach((element) => {
         element.addEventListener('click', onBookingClick);
     });
-
-    // document.getElementById('icon-arrow-down').addEventListener('click', onIconClick);
 }
 
 function init() {

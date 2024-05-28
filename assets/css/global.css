@@ -1,0 +1,41 @@
+:root {
+    --color-primary: white;
+    --color-secondary: black;
+
+    --color-blackshades: #0f172a;
+    --color-whitecream: #f0e8d5;
+    --color-neonpurple: #e1c6fe;
+
+    --color-dimgray: rgb(105, 105, 105);
+
+    --color-jblue: #0a2d6d;
+    --color-darkpurple: #28223e;
+    --color-purple: rgb(34, 4, 14);
+    
+    --color-white: #fff;
+    --color-gray: rgb(148, 163, 184);
+
+    --font-size-17xl: 45px;
+    --font-size-16xl: 40px;
+    --font-size-15xl: 30px;
+    --font-size-9xl: 25px;
+    --font-size-3xl: 17px;
+    --font-size-xl: 15px;
+    --font-size-base: 13px;
+    --font-size-xs: 9px;
+    --font-size-3xs: 7px;
+
+    --text-shadow-glow: 0 0 5px var(--color-neonpurple);
+
+    --br-xl: 20px;
+    --br-base: 16px;
+    --br-xs: 12px;
+    --br-3xs: 9px;
+
+    --padding-5xl: 26px;
+    --padding-3xl: 20px;
+    --padding-xl: 16px;
+    --padding-base: 12px;
+    --padding-xs: 9px;
+    --padding-3xs: 6px;
+}
