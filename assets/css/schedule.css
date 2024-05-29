@@ -5,11 +5,16 @@
     font-family: 'Quicksand', sans-serif;    
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--color-purple);
-    background-image: url('../images/race-6.jpg');
-    background-size: 100%;
+    background-image: url('../images/race-1.jpg');
+    background-size: 100% 33.33%, 100% 33.33%, 100% 33.33%;
     background-repeat: no-repeat;
+    background-position: left top, center center, right bottom;
 }
 
 .container {
@@ -26,7 +31,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 110vh;
+    height: 130vh;
 }
 
 .shadow-style-to-top {
@@ -73,8 +78,12 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
+    flex-wrap: wrap;
+
     width: 500px;
     height: 300px;
+
+    text-align: center;
 
     background: rgba( 255, 255, 255, 0.05 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -97,7 +106,7 @@ body {
     border-radius: 0;
     border: none;
 
-    background-color: rgba(70, 4, 14, 0.3);
+    background-color: rgba(70, 4, 14, 0.8);
 }
 
 .modal:hover {
@@ -286,7 +295,7 @@ body {
 .carousel-button {
     /* top: 50%; */
     /* transform: translateY(-50%); */
-    background-color: rgba(70, 4, 14, 0.3);
+    background-color: rgba(70, 4, 14, 0.8);
 
     color: white;
     border: none;
@@ -304,7 +313,7 @@ body {
 
 @media (max-width: 1024px) {
     .header-content {
-        height: 35vh;
+        height: 100vh;
     }
 
     .feeds-content {
@@ -330,13 +339,21 @@ body {
     }
 }
 
-@media (max-width: 390px) {
-    * {
-        /* border: 1px solid red; */
+@media (max-width: 519px) {
+    .modal {
+        transform: scale(0.8);
     }
+}
 
+@media (max-width: 443px) {
+    .modal {
+        transform: scale(0.7);    
+    }
+}
+
+@media (max-width: 390px) {
     .header-content {
-        height: 35vh;
+        height: auto;
     }
 
     .modal {

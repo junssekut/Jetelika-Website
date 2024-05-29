@@ -7,7 +7,7 @@
 
 body {
     background-color: var(--color-purple);
-    background-image: url('../../public/race-1.jpg');
+    background-image: url('../images/race-1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -120,67 +120,5 @@ body {
     }
     to {
         top: 3px;
-    }
-}
-
-/* Responsive Styles */
-@media (max-width: 1200px) {
-    .header-title {
-        font-size: 1.75rem;
-    }
-    .text-content {
-        font-size: 1.125rem;
-    }
-}
-
-@media (max-width: 992px) {
-    .container-header, .container-text {
-        width: 90%;
-    }
-    .header-title {
-        font-size: 1.5rem;
-    }
-    .text-content {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .container-header, .container-text {
-        width: 95%;
-        margin: 20px 0;
-    }
-    .header-title {
-        font-size: 1.25rem;
-        line-height: 1.1;
-    }
-    .text-content {
-        font-size: 0.875rem;
-    }
-    .button-explore {
-        width: 180px;
-        height: 45px;
-    }
-}
-
-@media (max-width: 576px) {
-    .container-header, .container-text {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .header-title {
-        font-size: 1rem;
-        line-height: 1;
-    }
-    .text-content {
-        font-size: 0.75rem;
-        line-height: 1.25;
-    }
-    .button-explore {
-        width: 160px;
-        height: 40px;
-    }
-    .button-explore:hover .button-explore-icon {
-        animation: none;
     }
 }

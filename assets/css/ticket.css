@@ -5,11 +5,16 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--color-purple);
-    background-image: url('../images/race-2.jpg');
-    background-size: 100%;
+    background-image: url('../images/race-1.jpg'), url('../images/race-2.jpg');
+    background-size: 100% 33.33%, 100% 33.33%;
     background-repeat: no-repeat;
+    background-position: left top, center center;
 }
 
 a {
@@ -49,7 +54,7 @@ a {
 
     padding-top: 130px;
 
-    background-image: linear-gradient(to bottom, rgba(34, 4, 14, 0) 90%, rgba(34, 4, 14, 0.9) 100%);
+    /* background-image: linear-gradient(to bottom, rgba(34, 4, 14, 0) 90%, rgba(34, 4, 14, 0.9) 100%); */
     background-size: cover;
     background-position: center center;
 
@@ -116,18 +121,18 @@ a {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
-    width: 1200px;
+    
+    width: 80vw;
     height: 400px;
 
-    background: rgba(70, 4, 14, 0.3);
+    background: rgba(70, 4, 14, 0.8);
 
     /* border: 1px solid red; */
     transition: all 0.2s; 
 }
 
 .circuit-container:hover {
-    background: rgba(70, 4, 14, 0.8);
+    background: rgba(70, 4, 14, 0.9);
 }
 
 .circuit-image-wrapper {
@@ -187,11 +192,11 @@ a {
 
     transition: all 0.2s;
 
-    background: rgba(70, 4, 14, 0.3);
+    background: rgba(70, 4, 14, 0.8);
 }
 
 .seat-layout:hover {
-    background: rgba(70, 4, 14, 0.8)
+    background: rgba(70, 4, 14, 0.9);
 }
 
 .seat-layout-title {
@@ -273,6 +278,7 @@ a {
 }
 
 .seat-component-link {
+    font-size: 1em;
     color: var(--color-whitecream);
 }
 
@@ -330,7 +336,9 @@ a {
     justify-content: space-evenly;
     align-items: center;
 
-    width: 65%;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .card {
@@ -498,6 +506,23 @@ a {
     color: var(--color-blackshades);
 }
 
+@media (max-width: 1338px) {
+    .circuit-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .seat-layout {
+        width: 80vw;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .seat-component {
+
+    }
+}
+
 @media (max-width: 1024px) {
     .ticket-countdown {
         height: 50vh;
@@ -510,21 +535,66 @@ a {
     .countdown-wrapper {
         width: 80%;
     }
+
     .circuit-container {
-        width: 800px;
+        width: 80vw;
     }
 
+    .circuit-title {
+        /* font-size: 1.1rem; */
+    }
+
+    .circuit-text {
+        /* width: 30px; */
+        /* font-size: 0.7rem; */
+    }
+
+    .cards-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 828px) {
+    
     .circuit-title {
         font-size: 1.1rem;
     }
 
     .circuit-text {
-        width: 300px;
-        font-size: 0.7rem;
+        width: 80%;
+        font-size: 0.9rem;
     }
 
-    .cards-wrapper {
-        width: 100%;
+    .seat-component {
+        width: 30px;
+        height: 30px;
+    }
+
+    .seat-layout {
+        width: 80vw;    
+    }
+
+    .seat-layout-title {
+        font-size: 1.1em;
+    }
+
+    .seat-title {
+        font-size: 0.6em;
+    }
+
+    .seat-component-link {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 541px) {
+    .circuit-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .ticket-countdown {
+        margin-bottom: 100px;
     }
 }
 
@@ -535,7 +605,8 @@ a {
 
     .ticket-countdown {
         padding-top: 30px;
-        height: 15vh;
+        /* height: 35vh; */
+        height: auto;
     }
 
     .ticket-countdown-title {
@@ -543,7 +614,7 @@ a {
     }
 
     .ticket-countdown-text {
-        display: none;
+        font-size: 0.8rem;
     }
 
     .countdown-wrapper {
@@ -587,8 +658,9 @@ a {
     }
 
     .seat-layout {
-        transform: scale(0.4);
-        margin: 0;
+        width: 60vw;
+        /* transform: scale(0.4); */
+        /* margin: 0; */
     }
 
     .cards-title {
@@ -602,5 +674,23 @@ a {
     .cards-wrapper {
         flex-direction: column;
         gap: 30px;
+    }
+
+    .seat-component {
+        width: 15px;
+        height: 15px;
+    }
+
+    .seat-layout-title {
+        /* font-size: 0.9em; */
+    }
+
+    .seat-title {
+        font-size: 0.3em;
+        letter-spacing: 0.3rem;
+    }
+
+    .seat-component-link {
+        font-size: 0.1em;
     }
 }

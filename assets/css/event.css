@@ -8,32 +8,36 @@
 }
 
 html {
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
 body {
     background-color: var(--color-purple);
-    background-image: url('../images/race-1.jpg');
-    background-size: 100%;
+    background-image: url('../images/race-1.jpg'), url('../images/race-2.jpg'), url('../images/race-3.jpg');
+    background-size: 100% 33.33%, 100% 33.33%, 100% 33.33%;
     background-repeat: no-repeat;
+    background-position: left top, center center, right bottom;
 }
+
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .shadow-1 {
     position: absolute;
     z-index: -1;
     background: linear-gradient(to top, rgb(34, 4, 14, 0.3), rgba(34, 4, 14, 1));
-    /* background: black; */
     top: 0;
     left: 0;
     width: 100vw;
-    height: 110vh;
+    height: 100rem;
 }
 
 .event-modals {
@@ -65,7 +69,7 @@ body {
     justify-content: space-evenly;
     align-items: center;
 
-    width: 90%;
+    width: 100%;
 
     /* border: 1px solid red; */
 }
@@ -79,8 +83,8 @@ body {
     padding: 15px;
 
     gap: 5px;
-    width: 300px;
-    height: 300px;
+    width: 20em;
+    height: 20em;
 
     background: rgba( 255, 255, 255, 0.15 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -96,7 +100,7 @@ body {
     width: 380px;
     height: 380px;
 
-    background-color: rgba(70, 4, 14, 0.3);
+    background-color: rgba(70, 4, 14, 0.8);
     box-shadow: none;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -340,6 +344,10 @@ body {
 }
 
 @media (max-width: 1024px) {
+    .container {
+        gap: 30px;
+    }
+    
     .event-modals {
         height: 65vh;
     }
@@ -363,6 +371,42 @@ body {
     .carousel-card {
         flex: 1 0 48%;
     }
+
+    .feeds-container {
+        margin-bottom: 500px;
+    }
+}
+
+@media (max-width: 735px) {
+    .event-modal {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 1292px) {
+    .featured-event-modals {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .event-modal-title {
+        font-size: 18px;
+    }
+
+    .event-modal-text {
+        font-size: 12px;
+    }
+
+    .event-modal-description {
+        font-size: 9px;
+    }
+
+    .event-modal-button {
+        width: 100px;
+        height: 30px;
+
+        font-size: 9px;
+    }
 }
 
 @media (max-width: 390px) {
@@ -373,7 +417,12 @@ body {
         height: 100vh;
     }
 
+    .event-modal {
+        transform: scale(1);
+    }
+
     .featured-event-modals {
+        flex-wrap: nowrap;
         height: auto;
         gap: 20px;
         flex-direction: column;
@@ -395,5 +444,9 @@ body {
     
     .event-modal-button {
         margin-top: 0;
+    }
+
+    .feeds-container {
+        margin-bottom: 100px;
     }
 }

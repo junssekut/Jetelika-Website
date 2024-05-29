@@ -26,7 +26,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
 }
 
 .shadow-style-to-bottom {
@@ -240,6 +240,7 @@ body {
     .packages {
         flex-wrap: wrap;
         height: auto;
+        margin-bottom: 200px;
     }
 
     .package {
