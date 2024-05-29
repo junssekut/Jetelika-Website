@@ -1,10 +1,3 @@
-/*
- * Notification js
- * https://amaterasusan.github.io/notification
- * @license MIT licensed
- *
- * Copyright (C) 2024 Helen Nikitina
- */
 function Notification(options = {}) {
     let opts = {};
     let timeouts = {};

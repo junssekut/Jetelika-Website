@@ -7,8 +7,7 @@
     
     <link rel="shortcut icon" href="../assets/images/logo-jetelika.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="../assets/book.css">
-    <link rel="stylesheet" href="../home/custom-scrollbar.css">
+    <link rel="stylesheet" href="../assets/css/book.css">
 </head>
 <body>
     <div id="placeholder"></div>
@@ -35,7 +34,7 @@
                 </div>
                 <div class="package-footer">
                     <p class="package-price">$1100</p>
-                    <a href="../booking-detail/booking-detail.html" class="package-book-link"><button class="package-book">Book Now <i class="fa-solid fa-bookmark package-book-icon"></i></button></a>
+                    <a href="./booking-detail.html" class="package-book-link"><button class="package-book">Book Now <i class="fa-solid fa-bookmark package-book-icon"></i></button></a>
                 </div>
             </div>
             <div class="package package-premium">
@@ -54,7 +53,7 @@
                 </div>
                 <div class="package-footer">
                     <p class="package-price">$2000</p>
-                    <a href="../booking-detail/booking-detail.html" class="package-book-link"><button class="package-book">Book Now <i class="fa-solid fa-bookmark package-book-icon"></i></button></a>
+                    <a href="./booking-detail.html" class="package-book-link"><button class="package-book">Book Now <i class="fa-solid fa-bookmark package-book-icon"></i></button></a>
                 </div>
             </div>
             <div class="package package-vip">
@@ -73,13 +72,25 @@
                 </div>
                 <div class="package-footer">
                     <p class="package-price">$3000</p>
-                    <a href="../booking-detail/booking-detail.html" class="package-book-link"><button class="package-book">Book Now <i class="fa-solid fa-bookmark package-book-icon"></i></button></a>
+                    <a href="./booking-detail.html" class="package-book-link"><button class="package-book">Book Now <i class="fa-solid fa-bookmark package-book-icon"></i></button></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <script defer type="module" src="./book.js"></script>
+    <script type="module">
+        import * as navbar from '../navbar/navbar.js';
+        navbar.init();
+    </script>
+    <script>
+        const icons = document.querySelectorAll('.package-benefit-icon');
+        
+        icons.forEach(icon => {
+            const randomDelay = Math.random() * 0.5; // Random delay between 0 and 2 seconds
+            icon.style.animationDelay = `${randomDelay}s`;
+        });
+
+    </script>
     <script type="module" src="../assets/js/preloader-injector.js"></script>
 </body>
 </html>

@@ -8,7 +8,6 @@
 
     <link rel="shortcut icon" href="../assets/images/logo-jetelika.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="../assets/css/fonts.css">
     <link rel="stylesheet" href="../assets/css/global.css">
     <link rel="stylesheet" href="../assets/css/home.css">
 </head>
@@ -30,11 +29,16 @@
                 <p class="text-content">we can help you enjoy your fullest.</p>
             </div>
 
-            <button class="button-explore">Explore Now <i class="fa-solid fa-chevron-down button-explore-icon"></i></button>
+            <a href="./event.html" class="button-explore-link">
+                <button class="button-explore">Explore Now <i class="fa-solid fa-chevron-down button-explore-icon"></i></button>
+            </a>
         </div>
     </div>
 
-    <script defer type="module" src="./home.js"></script>
+    <script type="module">
+        import * as navbar from '../navbar/navbar.js';
+        navbar.init();
+    </script>
     <script type="module" src="../assets/js/preloader-injector.js"></script>
 </body>
 

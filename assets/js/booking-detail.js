@@ -1,5 +1,5 @@
-import { Notification } from '../notification/notification.js';
-import * as navbar from '../navbar/navbar.js';
+import { Notification } from './notification.js';
+import * as navbar from '../../navbar/navbar.js';
 
 const popup = Notification({
     position: 'top-right',
@@ -8,44 +8,6 @@ const popup = Notification({
     isHideTitle: false,
     maxOpened: 3,
 });
-
-function test() {
-    // error
-    popup.error({
-        title: 'Oops',
-        message: `An error has occurred"`,
-    });
-    
-    // or even insert HTML
-    popup.error({
-        title: `<div class="title-cust title-error">Oops</div>`,
-        message: `<div class="wrapper-notification">
-        <div class="icons icon-error"></div>
-        <div class="message message-text-error">An error has occurred</div></div>`,
-    });
-    
-    // info
-    popup.info({
-        title: 'Info',
-        message: 'Info message'
-    });
-    
-    // warning
-    popup.warning({
-        title: 'Warning',
-        message: 'Warning message'
-    });
-    
-    // success
-    popup.success({
-        title: 'Success',
-        message: 'Success message'
-    });
-}
-
-function submitFormListener(event) {
-    console.log(event);
-}
 
 function registerPayments() {
     const paymentClickHandler = function(element) {
@@ -344,48 +306,15 @@ function validateForm() {
     }, 10000);
 }
 
-function registerTimer() {
-    let i = 0;
-    const test = document.getElementById('content');
-    const images = [
-        '../public/race-1.jpg',
-        '../public/race-2.jpg',
-        '../public/race-3.jpg',
-        '../public/race-4.jpg',
-        '../public/race-5.jpg',
-        '../public/race-6.jpg',
-        '../public/race-7.jpg',
-        '../public/race-8.jpg',
-        '../public/race-9.jpg'
-    ];
-
-    setInterval(() => {
-        test.classList.add('fade');
-        setTimeout(() => {
-            test.style.backgroundImage = `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${images[i]})`;
-            i = (i + 1) % images.length;
-            test.classList.remove('fade');
-        }, 1000);
-    }, 5000);
-}
-
 function init() {
     navbar.init();
 
     document.addEventListener('DOMContentLoaded', function() {
         registerPayments();
 
-        // document.getElementById('form-detail').addEventListener('submit', onFormDetailSubmit);
-        // document.getElementById('form-credit-card').addEventListener('submit', onCardFormSubmit);
-        // document.getElementById('form-jetelika-pay').addEventListener('submit', onFormJetelikaPaySubmit);
-
         document.querySelectorAll('.modal-submit').forEach((element) => {
-            element.addEventListener('click', () => {
-                validateForm();
-            });
+            element.addEventListener('click', () => validateForm());
         });
-
-        // registerTimer();
     });
 
 }

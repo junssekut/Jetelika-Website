@@ -1,15 +1,13 @@
-home-wallpaper: https://www.wallpaperflare.com/flat-design-illustration-aero-vector-art-sunrise-travel-purple-wallpaper-bgorz/download
-event-wallpaper: https://www.wallpaperflare.com/deer-and-trees-deer-in-forest-during-sunset-drawing-animals-wallpaper-cs/download
-ticket-wallpaper: https://www.wallpaperflare.com/neon-4k-hd-best-for-desktop-wallpaper-tzqva/download
-
-art-expo: https://www.wallpaperflare.com/fantasy-game-magic-trees-people-train-men-painting-palm-trees-wallpaper-grfsd
-film-festival: https://www.wallpaperflare.com/clapboard-screen-displaying-16-21-34-21-roadside-jakob-and-ryan-thomas-tougher-wallpaper-ukjdw/download
-poster: https://www.youtube.com/watch?v=iwB0_lview4
-food-festival: https://www.wallpaperflare.com/vegetable-store-near-road-vegetable-stall-during-daytime-market-stall-wallpaper-zuvsf/download
-sports-tournament: https://www.wallpaperflare.com/wicketkeeper-cricket-batsman-ball-game-india-competition-wallpaper-zkaad/download
-science-exhibition: https://www.wallpaperflare.com/hexagonal-mirror-architecture-astronomy-bright-building-contemporary-wallpaper-ayrme/download
-fashion-show: https://www.wallpaperflare.com/model-the-show-kendall-jenner-paris-fashion-week-wallpaper-uhygs
-
-img-circuit: https://cdn.dribbble.com/userupload/12438779/file/original-cee79cc9d494784e8d478e572c17db0c.jpg?resize=1600x1080
-
-countdown: https://dribbble.com/shots/20840875--Ramadhan-1444H-Countdown
+References:
+    - home-wallpaper: https://www.wallpaperflare.com/flat-design-illustration-aero-vector-art-sunrise-travel-purple-wallpaper-bgorz/download
+    - event-wallpaper: https://www.wallpaperflare.com/deer-and-trees-deer-in-forest-during-sunset-drawing-animals-wallpaper-cs/download
+    - ticket-wallpaper: https://www.wallpaperflare.com/neon-4k-hd-best-for-desktop-wallpaper-tzqva/download
+    - art-expo: https://www.wallpaperflare.com/fantasy-game-magic-trees-people-train-men-painting-palm-trees-wallpaper-grfsd
+    - film-festival: https://www.wallpaperflare.com/clapboard-screen-displaying-16-21-34-21-roadside-jakob-and-ryan-thomas-tougher-wallpaper-ukjdw/download
+    - poster: https://www.youtube.com/watch?v=iwB0_lview4
+    - food-festival: https://www.wallpaperflare.com/vegetable-store-near-road-vegetable-stall-during-daytime-market-stall-wallpaper-zuvsf/download
+    - sports-tournament: https://www.wallpaperflare.com/wicketkeeper-cricket-batsman-ball-game-india-competition-wallpaper-zkaad/download
+    - science-exhibition: https://www.wallpaperflare.com/hexagonal-mirror-architecture-astronomy-bright-building-contemporary-wallpaper-ayrme/download
+    - fashion-show: https://www.wallpaperflare.com/model-the-show-kendall-jenner-paris-fashion-week-wallpaper-uhygs
+    - img-circuit: https://cdn.dribbble.com/userupload/12438779/file/original-cee79cc9d494784e8d478e572c17db0c.jpg?resize=1600x1080
+    - countdown: https://dribbble.com/shots/20840875--Ramadhan-1444H-Countdown

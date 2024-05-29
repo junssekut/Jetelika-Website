@@ -7,7 +7,7 @@
 
     <link rel="shortcut icon" href="../assets/images/logo-jetelika.png" type="image/x-icon" />
 
-    <link rel="stylesheet" href="./schedule.css">
+    <link rel="stylesheet" href="../assets/css/schedule.css">
 </head>
 <body>
     <div id="preloader"></div>
@@ -39,7 +39,7 @@
             <div class="modal modal-solid">
                 <div class="modal-header">
                     <h1 class="modal-title">Art Expo 2024</h1>
-                    <img src="../public/art-expo.jpg" alt="" class="modal-image">
+                    <img src="../assets/images/art-expo.jpg" alt="" class="modal-image">
                 </div>
                 <div class="modal-description">
                     <p class="modal-text">15 June 2024</p>
@@ -54,7 +54,7 @@
             <div class="modal modal-solid">
                 <div class="modal-header">
                     <h1 class="modal-title">Summer Music Festival</h1>
-                    <img src="../public/music-festival.jpg" alt="" class="modal-image">
+                    <img src="../assets/images/music-festival.jpg" alt="" class="modal-image">
                 </div>
                 <div class="modal-description">
                     <p class="modal-text">22 July 2024</p>
@@ -76,7 +76,7 @@
                     <div class="carousel-card modal modal-solid">
                         <div class="modal-header">
                             <h1 class="modal-title">Food Festival 2024</h1>
-                            <img src="../public/food-festival.jpg" alt="" class="modal-image">
+                            <img src="../assets/images/food-festival.jpg" alt="" class="modal-image">
                         </div>
                         <div class="modal-description">
                             <p class="modal-text">Saturday, 25 August 2024</p>
@@ -93,7 +93,7 @@
                     <div class="carousel-card modal modal-solid">
                         <div class="modal-header">
                             <h1 class="modal-title">Sports Tournament 2024</h1>
-                            <img src="../public/sports-tournament.jpg" alt="" class="modal-image">
+                            <img src="../assets/images/sports-tournament.jpg" alt="" class="modal-image">
                         </div>
                         <div class="modal-description">
                             <p class="modal-text">Saturday, 10 September 2024</p>
@@ -110,7 +110,7 @@
                     <div class="carousel-card modal modal-solid">
                         <div class="modal-header">
                             <h1 class="modal-title">Tech Conference 2024</h1>
-                            <img src="../public/tech-conference.jpg" alt="" class="modal-image">
+                            <img src="../assets/images/tech-conference.jpg" alt="" class="modal-image">
                         </div>
                         <div class="modal-description">
                             <p class="modal-text">Friday, 5 October 2024</p>
@@ -127,7 +127,7 @@
                     <div class="carousel-card modal modal-solid">
                         <div class="modal-header">
                             <h1 class="modal-title">Science Exhibition 2024</h1>
-                            <img src="../public/science-exhibition.jpg" alt="" class="modal-image event-modal-image-bottom">
+                            <img src="../assets/images/science-exhibition.jpg" alt="" class="modal-image event-modal-image-bottom">
                         </div>
                         <div class="modal-description">
                             <p class="modal-text">Saturday, 20 November 2024</p>
@@ -144,7 +144,7 @@
                     <div class="carousel-card modal modal-solid">
                         <div class="modal-header">
                             <h1 class="modal-title">Fashion Show 2024</h1>
-                            <img src="../public/fashion-show.jpg" alt="" class="modal-image event-modal-image-top">
+                            <img src="../assets/images/fashion-show.jpg" alt="" class="modal-image event-modal-image-top">
                         </div>
                         <div class="modal-description">
                             <p class="modal-text">Friday, 15 December 2024</p>
@@ -167,7 +167,69 @@
         </div>
     </div>
 
-    <script defer type="module" src="./schedule.js"></script>
+    <script defer type="module">
+        import * as navbar from '../navbar/navbar.js';
+        navbar.init();
+    </script>
+    <script>
+        function registerEvents() {
+            const onReadMore = function (event) {
+                const hiddenElement = event.target.parentNode.parentNode.querySelector('.modal-hidden');
+
+                if (hiddenElement.classList.contains('modal-hidden-active')) {
+                    hiddenElement.classList.remove('modal-hidden-active');
+                    event.target.textContent = 'More Info';
+                } else {
+                    hiddenElement.classList.add('modal-hidden-active');
+                    event.target.textContent = 'Close';
+                }
+            };
+
+            const readMoreElement = document.getElementsByClassName('modal');
+
+            Array.from(readMoreElement).forEach((element) => {
+                const modalButton = element.querySelector('.modal-button');
+
+                modalButton.addEventListener('click', onReadMore);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            registerEvents();
+        });
+
+        const carousel = document.querySelector('.carousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        let currentIndex = 0;
+        let n = 3;
+
+        if (window.innerWidth <= 1024) n = 2;
+        if (window.innerWidth <= 768) n = 1;
+
+        function updateCarousel() {
+            const cardWidth = carousel.clientWidth / n;
+            carousel.style.transform = `translateX(${-currentIndex * cardWidth}px)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < carousel.children.length - n) {
+                currentIndex++;
+                updateCarousel();
+            }
+        });
+
+        window.addEventListener('resize', updateCarousel);
+        updateCarousel();
+    </script>
     <script type="module" src="../assets/js/preloader-injector.js"></script>
 </body>
 </html>

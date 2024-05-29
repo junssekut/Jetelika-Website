@@ -7,7 +7,7 @@
 
 body {
     background-color: var(--color-purple);
-    background-image: url('../public/race-5.jpg');
+    background-image: url('../images/race-5.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -133,6 +133,17 @@ body {
 .package-benefit-icon {
     position: relative;
     margin: 5px;
+    animation: iconAnimation 1s infinite alternate;
+}
+
+@keyframes iconAnimation {
+    from {
+        left: -5px;
+    }
+
+    to {
+        left: 0px;
+    }
 }
 
 .package-footer {

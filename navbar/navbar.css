@@ -126,6 +126,7 @@ a {
     inset: 0;
     margin: auto;
     font-size: var(--font-size-xl);
+    color: var(--color-white);
     cursor: pointer;
     transition: opacity 0.1s, transform 0.4s;
 }
